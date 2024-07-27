@@ -97,6 +97,7 @@ export default function DatePickerValue() {
       if (docSnap.exists()) {
         // Document exists, update it
        await updateDoc(docRef, data);
+       console.log('snapshot exists',data)
        setTarget((prev)=>({...prev,days:data?.days,months:data?.months,years:data?.years}))
       } else {
         // Document does not exist, create it
